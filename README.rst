@@ -8,38 +8,64 @@ Model for the Terrestrial Water Cycle (`cm4twc`) Python package.
 How to use the template?
 ------------------------
 
-1. Copy this repository locally using git clone:
+1. Choose a model name for your component(s) (to replace <model_name> in the
+   steps below), following `PEP 8 naming convention
+   <https://www.python.org/dev/peps/pep-0008/#package-and-module-names>`_
+   i.e. all-lowercase names with underscores if this improves readability only.
+
+2. Create a new local directory using your model name and adding the prefix
+   *cm4twccontrib-* to it:
 
 .. code-block:: bash
 
-   git clone https://github.com/cm4twc-org/cm4twccontrib-template.git
+   mkdir cm4twccontrib-<model_name>
 
-2. Rename the directory using your model name (note: replace <model_name> with your model name,
-   please follow `PEP8 naming convention <https://www.python.org/dev/peps/pep-0008/#package-and-module-names>`_
-   for your model name, i.e. all-lowercase names with underscores if this improves readability only):
 
-.. code-block:: bash
-
-   mv cm4twccontrib-template cm4twccontrib-<model_name>
-
-3. Change the remote repository using git remote (note: replace <github_id> with your GitHub account):
+3. Initialise a local git repository in it:
 
 .. code-block:: bash
 
    cd cm4twccontrib-<model_name>
-   git remote set-url origin https://github.com/<github_id>/cm4twccontrib-<model_name>.git
+   git init
 
-4. Rename the Python package using your model name:
+4. Download the template source available at
+   https://github.com/cm4twc-org/cm4twccontrib-template (click 'Code' then
+   click 'Download ZIP') and place the source in the newly created directory.
+
+5. Rename the existing Python package using your model name:
 
 .. code-block:: bash
 
    mv cm4twccontrib/template cm4twccontrib/<model_name>
 
-5. Develop your own component contribution(s) following the
-   `Guide for Contributors <https://cm4twc-org.github.io/cm4twc/for_contributors/preparation.html>`_
+6. Add and commit those files to the repository:
 
-6. List your package dependencies in `<requirements.txt>`_
+.. code-block:: bash
 
-7. Update `<README.rst>`_ to briefly describe your component(s)
+   git commit -am "commit template"
 
-8. Update the first part of `setup.py <setup.py#L4-L20>`_ with your details
+7. Create a remote git repository on GitHub and name it
+   *cm4twccontrib-<model_name>*. Note, using GitHub is not mandatory,
+   simply adjust the steps below accordingly if using another host.
+
+8. Set it as a remote repository for your local repository (replace <github_id>
+   with your actual GitHub username):
+
+.. code-block:: bash
+
+   git remote add origin https://github.com/<github_id>/cm4twccontrib-<model_name>.git
+
+9. Push your commit to the remote repository:
+
+.. code-block:: bash
+
+   git push -u origin main
+
+10. Develop your own component contribution(s) following the
+   `Guide for Contributors <https://cm4twc-org.github.io/cm4twc/for_contributors/preparation.html>`_.
+
+11. List your package dependencies in `<requirements.txt>`_.
+
+12. Overwrite the content in `<README.rst>`_ to briefly describe your component(s).
+
+13. Update the first part of `setup.py <setup.py#L4-L20>`_ with your own details.
