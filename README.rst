@@ -30,7 +30,8 @@ How to use the template?
 
 4. Download the template source available at
    https://github.com/cm4twc-org/cm4twccontrib-template (click 'Code' then
-   click 'Download ZIP') and place the source in the newly created directory.
+   click 'Download ZIP') and place the unzipped source in the newly created
+   directory.
 
 5. Rename the existing Python package using your model name:
 
@@ -61,11 +62,11 @@ How to use the template?
 
    git push -u origin main
 
-10. Develop your own component contribution(s) following the
-   `Guide for Contributors <https://cm4twc-org.github.io/cm4twc/for_contributors/preparation.html>`_.
+10. Develop your own component contribution(s) following the `Guide for Contributors
+    <https://cm4twc-org.github.io/cm4twc/for_contributors/preparation.html>`_.
 
 11. List your package dependencies in `<requirements.txt>`_.
 
-12. Overwrite the content in `<README.rst>`_ to briefly describe your component(s).
+12. Overwrite the content in `<README.rst>`_ to describe your component(s).
 
 13. Update the first part of `setup.py <setup.py#L4-L20>`_ with your own details.
