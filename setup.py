@@ -15,8 +15,8 @@ authors = 'Jane Doe, John Doe'
 # (see https://choosealicense.com/)
 licence = 'GPL-3'
 
-# github_id: GitHub user or organisation name where remote repository is
-github_id = 'cm4twc-org'
+# source_url: remote location of the git repository hosting the source code
+source_url = 'https://github.com/cm4twc-org/cm4twccontrib-template'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 with open("README.rst", 'r') as fh:
@@ -49,10 +49,7 @@ setup(
     author=authors,
 
     project_urls={
-        'Source Code':
-            'https://github.com/{}/cm4twccontrib-{}'.format(
-                github_id.lower(), pkg_name.lower()
-            )
+        'Source Code': source_url
     },
 
     license=licence,
