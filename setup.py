@@ -4,8 +4,8 @@ from setuptools import setup, find_namespace_packages
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # information to be updated by contributors
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# pkg_name: name of the overarching model for the component(s)
-pkg_name = 'template'
+# model_name: name of the overarching model for the component(s)
+model_name = 'template'
 
 # authors: list of the contributors' names
 # (firstname followed by lastname, comma-separated list)
@@ -22,7 +22,7 @@ source_url = 'https://github.com/cm4twc-org/cm4twccontrib-template'
 with open("README.rst", 'r') as fh:
     long_desc = fh.read()
 
-with open("cm4twccontrib/{}/version.py".format(pkg_name.lower()), 'r') as fv:
+with open("cm4twccontrib/{}/version.py".format(model_name.lower()), 'r') as fv:
     exec(fv.read())
 
 
@@ -38,11 +38,11 @@ def requirements(filename):
 
 
 setup(
-    name='cm4twccontrib-{}'.format(pkg_name.lower()),
+    name='cm4twccontrib-{}'.format(model_name.lower()),
 
     version=__version__,
 
-    description='cm4twc component(s) for the {} model'.format(pkg_name),
+    description='cm4twc component(s) for the {} model'.format(model_name),
     long_description=long_desc,
     long_description_content_type="text/x-rst",
 
