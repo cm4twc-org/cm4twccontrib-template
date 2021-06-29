@@ -1,7 +1,7 @@
 import cm4twc
 
 
-class OpenWaterComponent(cm4twc.components.OpenWaterComponent):
+class OpenWaterComponent(cm4twc.component.OpenWaterComponent):
     """component description here"""
 
     # component definition below

@@ -1,7 +1,7 @@
 import cm4twc
 
 
-class SubSurfaceComponent(cm4twc.components.SubSurfaceComponent):
+class SubSurfaceComponent(cm4twc.component.SubSurfaceComponent):
     """component description here"""
 
     # component definition below

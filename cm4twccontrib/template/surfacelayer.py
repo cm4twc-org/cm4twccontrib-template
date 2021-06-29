@@ -1,7 +1,7 @@
 import cm4twc
 
 
-class SurfaceLayerComponent(cm4twc.components.SurfaceLayerComponent):
+class SurfaceLayerComponent(cm4twc.component.SurfaceLayerComponent):
     """component description here"""
 
     # component definition below
