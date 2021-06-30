@@ -32,8 +32,8 @@ class SubSurfaceComponent(cm4twc.component.SubSurfaceComponent):
             'units': '1'
         }
     }
-    _land_sea_mask = False
-    _flow_direction = False
+    _requires_land_sea_mask = False
+    _requires_flow_direction = False
 
     # component implementation of initialise-run-finalise paradigm below
     def initialise(self, state_name, **kwargs):
