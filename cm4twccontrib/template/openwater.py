@@ -34,6 +34,7 @@ class OpenWaterComponent(cm4twc.component.OpenWaterComponent):
     }
     _requires_land_sea_mask = False
     _requires_flow_direction = True
+    _requires_cell_area = False
 
     # component implementation of initialise-run-finalise paradigm below
     def initialise(self, state_name, **kwargs):

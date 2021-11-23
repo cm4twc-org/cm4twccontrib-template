@@ -34,6 +34,7 @@ class SubSurfaceComponent(cm4twc.component.SubSurfaceComponent):
     }
     _requires_land_sea_mask = False
     _requires_flow_direction = False
+    _requires_cell_area = False
 
     # component implementation of initialise-run-finalise paradigm below
     def initialise(self, state_name, **kwargs):
