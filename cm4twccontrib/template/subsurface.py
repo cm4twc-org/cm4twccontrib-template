@@ -37,7 +37,7 @@ class SubSurfaceComponent(cm4twc.component.SubSurfaceComponent):
     _requires_cell_area = False
 
     # component implementation of initialise-run-finalise paradigm below
-    def initialise(self, state_name, **kwargs):
+    def initialise(self, state_name, parameter_name, constant_name, **kwargs):
         pass
 
     def run(self,
@@ -60,5 +60,5 @@ class SubSurfaceComponent(cm4twc.component.SubSurfaceComponent):
             }
         )
 
-    def finalise(self, state_name, **kwargs):
+    def finalise(self, state_name, parameter_name, constant_name, **kwargs):
         pass
