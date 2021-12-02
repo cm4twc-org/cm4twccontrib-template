@@ -48,7 +48,8 @@ class OpenWaterComponent(cm4twc.component.OpenWaterComponent):
 
     # component implementation of initialise-run-finalise paradigm below
     def initialise(self, state_name, parameter_name, constant_name, **kwargs):
-        pass
+        if not self.initialised_states:
+            state_name.set_timestep(-1, 0.)
 
     def run(
             self,
