@@ -52,7 +52,8 @@ class SurfaceLayerComponent(cm4twc.component.SurfaceLayerComponent):
     _requires_cell_area = False
 
     # component implementation of initialise-run-finalise paradigm below
-    def initialise(self, state_name, parameter_name, constant_name, **kwargs):
+    def initialise(self, input_name, state_name, parameter_name,
+                   constant_name, **kwargs):
         if not self.initialised_states:
             state_name.set_timestep(-1, 0.)
 
