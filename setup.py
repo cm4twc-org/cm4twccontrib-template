@@ -16,13 +16,13 @@ authors = 'Jane Doe, John Doe'
 licence = 'GPL-3'
 
 # source_url: remote location of the git repository hosting the source code
-source_url = 'https://github.com/cm4twc-org/cm4twccontrib-template'
+source_url = 'https://github.com/unifhy-org/unifhycontrib-template'
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 with open("README.rst", 'r') as fh:
     long_desc = fh.read()
 
-with open("cm4twccontrib/{}/version.py".format(model_name.lower()), 'r') as fv:
+with open("unifhycontrib/{}/version.py".format(model_name.lower()), 'r') as fv:
     exec(fv.read())
 
 
@@ -38,11 +38,11 @@ def requirements(filename):
 
 
 setup(
-    name='cm4twccontrib-{}'.format(model_name.lower()),
+    name='unifhycontrib-{}'.format(model_name.lower()),
 
     version=__version__,
 
-    description='cm4twc component(s) for the {} model'.format(model_name),
+    description='unifhy component(s) for the {} model'.format(model_name),
     long_description=long_desc,
     long_description_content_type="text/x-rst",
 
@@ -60,10 +60,10 @@ setup(
         'Topic :: Scientific/Engineering :: Hydrology',
     ],
 
-    packages=find_namespace_packages(include=['cm4twccontrib.*'],
+    packages=find_namespace_packages(include=['unifhycontrib.*'],
                                      exclude=['tests']),
 
-    namespace_packages=['cm4twccontrib'],
+    namespace_packages=['unifhycontrib'],
 
     install_requires=requirements('requirements.txt'),
 

@@ -1,9 +1,9 @@
-A template to create cm4twc-compliant components
+A template to create unifhy-compliant components
 ================================================
 
 This repository features the package structure and contains the files
 one needs to create component(s) that can be used with the Community
-Model for the Terrestrial Water Cycle (`cm4twc`) Python package.
+Model for the Terrestrial Water Cycle (`unifhy`) Python package.
 
 How to use the template?
 ------------------------
@@ -14,22 +14,22 @@ How to use the template?
    i.e. all-lowercase names with underscores if this improves readability only.
 
 2. Create a new local directory using your model name and adding the prefix
-   *cm4twccontrib-* to it:
+   *unifhycontrib-* to it:
 
 .. code-block:: bash
 
-   mkdir cm4twccontrib-<model_name>
+   mkdir unifhycontrib-<model_name>
 
 
 3. Initialise a local git repository in it:
 
 .. code-block:: bash
 
-   cd cm4twccontrib-<model_name>
+   cd unifhycontrib-<model_name>
    git init
 
 4. Download the template source available at
-   https://github.com/cm4twc-org/cm4twccontrib-template (click 'Code' then
+   https://github.com/unifhy-org/unifhycontrib-template (click 'Code' then
    click 'Download ZIP') and place the unzipped source in the newly created
    directory.
 
@@ -37,7 +37,7 @@ How to use the template?
 
 .. code-block:: bash
 
-   mv cm4twccontrib/template cm4twccontrib/<model_name>
+   mv unifhycontrib/template unifhycontrib/<model_name>
 
 6. Add and commit those files to the repository:
 
@@ -46,7 +46,7 @@ How to use the template?
    git commit -am "commit template"
 
 7. Create a remote git repository on GitHub and name it
-   *cm4twccontrib-<model_name>*. Note, using GitHub is not mandatory,
+   *unifhycontrib-<model_name>*. Note, using GitHub is not mandatory,
    simply adjust the steps below accordingly if using another host.
 
 8. Set it as a remote repository for your local repository (replace <github_id>
@@ -54,7 +54,7 @@ How to use the template?
 
 .. code-block:: bash
 
-   git remote add origin https://github.com/<github_id>/cm4twccontrib-<model_name>.git
+   git remote add origin https://github.com/<github_id>/unifhycontrib-<model_name>.git
 
 9. Push your commit to the remote repository:
 
@@ -63,7 +63,7 @@ How to use the template?
    git push -u origin main
 
 10. Develop your own component contribution(s) following the `Guide for Contributors
-    <https://cm4twc-org.github.io/cm4twc/for_contributors/preparation.html>`_.
+    <https://unifhy-org.github.io/unifhy/for_contributors/preparation.html>`_.
 
 11. List your package dependencies in `<requirements.txt>`_.
 

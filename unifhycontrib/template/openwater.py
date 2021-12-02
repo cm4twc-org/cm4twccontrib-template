@@ -1,7 +1,7 @@
-import cm4twc
+import unifhy
 
 
-class OpenWaterComponent(cm4twc.component.OpenWaterComponent):
+class OpenWaterComponent(unifhy.component.OpenWaterComponent):
     """component description here"""
 
     # component definition below

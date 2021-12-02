@@ -1,24 +1,26 @@
-import cm4twc
+import unifhy
 
 
-class SurfaceLayerComponent(cm4twc.component.SurfaceLayerComponent):
+class SubSurfaceComponent(unifhy.component.SubSurfaceComponent):
     """component description here"""
 
     # component definition below
     _inwards = {
-        'soil_water_stress_for_transpiration',
-        'soil_water_stress_for_direct_soil_evaporation',
-        'standing_water_area_fraction',
-        'total_water_area_fraction'
-    }
-    _outwards = {
         'canopy_throughfall_flux',
         'snow_melt_flux',
         'transpiration_flux_from_root_uptake',
         'direct_water_evaporation_flux_from_soil',
         'water_evaporation_flux_from_standing_water',
-        'water_evaporation_flux_from_open_water',
-        'direct_throughfall_flux'
+        'open_water_area_fraction',
+        'open_water_surface_height'
+    }
+    _outwards = {
+        'soil_water_stress_for_transpiration',
+        'soil_water_stress_for_direct_soil_evaporation',
+        'standing_water_area_fraction',
+        'total_water_area_fraction',
+        'surface_runoff_flux_delivered_to_rivers',
+        'net_groundwater_flux_to_rivers'
     }
     _inputs_info = {
         'input_name': {
@@ -60,9 +62,11 @@ class SurfaceLayerComponent(cm4twc.component.SurfaceLayerComponent):
     def run(
             self,
             # transfers from other components
-            soil_water_stress_for_transpiration,
-            soil_water_stress_for_direct_soil_evaporation,
-            standing_water_area_fraction, total_water_area_fraction,
+            canopy_throughfall_flux, snow_melt_flux,
+            transpiration_flux_from_root_uptake,
+            direct_water_evaporation_flux_from_soil,
+            water_evaporation_flux_from_standing_water,
+            open_water_area_fraction, open_water_surface_height,
             # intrinsic component variables
             input_name, parameter_name, constant_name, state_name,
             **kwargs
@@ -70,13 +74,12 @@ class SurfaceLayerComponent(cm4twc.component.SurfaceLayerComponent):
         return (
             # transfers to other components
             {
-                'canopy_throughfall_flux': 0,
-                'snow_melt_flux': 0,
-                'transpiration_flux_from_root_uptake': 0,
-                'direct_water_evaporation_flux_from_soil': 0,
-                'water_evaporation_flux_from_standing_water': 0,
-                'water_evaporation_flux_from_open_water': 0,
-                'direct_throughfall_flux': 0
+                'soil_water_stress_for_transpiration': 0,
+                'soil_water_stress_for_direct_soil_evaporation': 0,
+                'standing_water_area_fraction': 0,
+                'total_water_area_fraction': 0,
+                'surface_runoff_flux_delivered_to_rivers': 0,
+                'net_groundwater_flux_to_rivers': 0
             },
             # intrinsic component outputs
             {
