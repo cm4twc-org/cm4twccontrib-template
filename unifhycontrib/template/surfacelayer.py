@@ -12,8 +12,7 @@ class SurfaceLayerComponent(unifhy.component.SurfaceLayerComponent):
         'total_water_area_fraction'
     }
     _outwards = {
-        'canopy_throughfall_flux',
-        'snow_melt_flux',
+        'canopy_liquid_throughfall_and_snow_melt_flux',
         'transpiration_flux_from_root_uptake',
         'direct_water_evaporation_flux_from_soil',
         'water_evaporation_flux_from_standing_water',
@@ -70,8 +69,7 @@ class SurfaceLayerComponent(unifhy.component.SurfaceLayerComponent):
         return (
             # transfers to other components
             {
-                'canopy_throughfall_flux': 0,
-                'snow_melt_flux': 0,
+                'canopy_liquid_throughfall_and_snow_melt_flux': 0,
                 'transpiration_flux_from_root_uptake': 0,
                 'direct_water_evaporation_flux_from_soil': 0,
                 'water_evaporation_flux_from_standing_water': 0,

@@ -6,8 +6,7 @@ class SubSurfaceComponent(unifhy.component.SubSurfaceComponent):
 
     # component definition below
     _inwards = {
-        'canopy_throughfall_flux',
-        'snow_melt_flux',
+        'canopy_liquid_throughfall_and_snow_melt_flux',
         'transpiration_flux_from_root_uptake',
         'direct_water_evaporation_flux_from_soil',
         'water_evaporation_flux_from_standing_water',
@@ -62,7 +61,7 @@ class SubSurfaceComponent(unifhy.component.SubSurfaceComponent):
     def run(
             self,
             # transfers from other components
-            canopy_throughfall_flux, snow_melt_flux,
+            canopy_liquid_throughfall_and_snow_melt_flux,
             transpiration_flux_from_root_uptake,
             direct_water_evaporation_flux_from_soil,
             water_evaporation_flux_from_standing_water,
